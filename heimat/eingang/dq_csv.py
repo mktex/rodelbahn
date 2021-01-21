@@ -1,5 +1,6 @@
 import functools
 import time
+
 import pandas as pd
 
 from .datenquellen import Datenquelle

@@ -1,10 +1,11 @@
 import functools
-import time
-import pandas as pd
-from .datenquellen import Datenquelle
-
 import sqlite3
+import time
+
+import pandas as pd
 from sqlalchemy import create_engine
+
+from .datenquellen import Datenquelle
 
 
 def timer(func):

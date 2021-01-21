@@ -1,14 +1,12 @@
 import json
 import pickle
 import sys
-from pprint import pprint
 
-import plotly
-import pandas as pd
 import numpy as np
-
+import pandas as pd
+import plotly
 from flask import Flask
-from flask import render_template, request, jsonify
+from flask import render_template, request
 from plotly.graph_objs import Bar
 
 sys.path.append(".")

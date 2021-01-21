@@ -1,6 +1,8 @@
 import functools
 import time
+
 from bs4 import BeautifulSoup
+
 from .datenquellen import Datenquelle
 
 

@@ -1,18 +1,17 @@
-import pandas as pd
-import numpy as np
-import nltk
-
-from nltk.stem.wordnet import WordNetLemmatizer
-from nltk.corpus import wordnet
-from nltk import pos_tag, word_tokenize
-from nltk.corpus import stopwords
 import string
 
-from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
+import nltk
+import numpy as np
+import pandas as pd
+from nltk import pos_tag, word_tokenize
+from nltk.corpus import stopwords
+from nltk.corpus import wordnet
+from nltk.stem.wordnet import WordNetLemmatizer
 from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 
-from ..eingang.dq_csv import CSV
 from .detect import urls_in_string
+from ..eingang.dq_csv import CSV
 
 """
 from importlib import reload

@@ -1,7 +1,8 @@
+from contextlib import contextmanager
+from functools import reduce
+
 import numpy as np
 import pandas as pd
-from functools import reduce
-from contextlib import contextmanager
 
 
 @contextmanager

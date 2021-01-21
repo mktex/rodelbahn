@@ -1,5 +1,6 @@
 import functools
 import time
+
 import pandas as pd
 import requests
 
@@ -22,8 +23,6 @@ def timer(func):
 
 
 class JSON(Datenquelle):
-    """
-    """
 
     def __init__(self, fname):
         super().__init__(fname)
@@ -34,8 +33,9 @@ class JSON(Datenquelle):
 
     def api(self, url):
         """
-
-        :param url: zB http://api.worldbank.org/v2/countries/br;cn;us;de/indicators/SP.POP.TOTL/?format=json&per_page=1000
+            Aufruf API-URLs
+        :param url:
+            z.B. http://api.worldbank.org/v2/countries/br;cn;us;de/indicators/SP.POP.TOTL/?format=json&per_page=1000
         :return:
         """
         r = requests.get(url)
@@ -46,11 +46,7 @@ class JSON(Datenquelle):
             return None
 
     def __add__(self, csv_obj):
-        """
-        """
         return pd.concat([self.data, csv_obj.data])
 
     def __repr__(self):
-        """
-        """
         return self.data.head(5)

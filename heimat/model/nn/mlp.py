@@ -1,10 +1,9 @@
 
 import numpy as np
-
+from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPClassifier
 
-from sklearn.metrics import confusion_matrix
 
 def get_clf(X, y):
     X_train, X_test, y_train, y_test = train_test_split(X, y, random_state = 1)
